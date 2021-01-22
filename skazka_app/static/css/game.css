@@ -1,0 +1,148 @@
+.vocab-box {
+    padding: 18px;
+    border: 2px solid white;
+    border-style: outset;
+}
+
+.board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.box001 {
+    width: 180px;
+    height: 30px;
+    margin: 16px;
+    padding: 16px;
+    padding-bottom: 32px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.box002 {
+    width: 150px;
+    height: 30px;
+    margin: 16px;
+    /* padding: 16px; */
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.box003 {
+    width: 150px;
+    height: 30px;
+    margin: 16px;
+    /* padding: 16px; */
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.box004 {
+    width: 150px;
+    height: 30px;
+    margin: 16px;
+    padding: 16px;
+    padding-bottom: 32px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#result {
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    font-size: x-large;
+    color: #b900bc;
+}
+
+.instructions {
+    font-style: italic;
+    margin-top: 12px;
+}
+
+.vocab-card {
+    border: 4px solid hotpink;
+}
+
+.match-board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+}
+
+.myInput {
+    font-size: 24px;
+    border: 1px solid black;
+    margin-top: 12px;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+.gameArea {
+    margin: auto;
+    text-align: center;
+}
+
+.showScore {
+    background-color: white;
+    padding: 12px;
+    width: 40%;
+    margin-bottom: 12px;
+}
+
+.gameButton {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #727882;
+    border-color: inherit;
+    margin: auto;
+}
+
+.gameButton:hover {
+    background-color: #5a6268;
+}
+
+.resultText {
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    font-size: x-large;
+    color: #b900bc;
+}
+
+/* CSS for decoder game */
+
+.decodeArea {
+    text-align: center;
+    margin: auto;
+}
+
+.codeKeys {
+    font-size: 0.8em;
+    background-color:  #5a6268;
+}
+
+.clockCounter {
+    font-size: 2.5em;
+    font-family: 'Bungee Outline', cursive;
+}
+
+.inVal {
+    width: 24px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.start {
+    margin: auto;
+    text-align: center;
+}

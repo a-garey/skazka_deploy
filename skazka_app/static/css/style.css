@@ -1,0 +1,200 @@
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Montserrat', sans-serif; */
+
+
+body {
+    padding: 30px; 
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../images/neon_bubbles.jpg');
+}
+
+input[type=password]{
+    width: 40%
+}
+
+input[type=text]{
+    width: 40%
+}
+
+input[type=email]{
+    width: 40%
+}
+
+label {
+    color: black;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+    }
+    label:after { content: " " }
+
+input, textarea, select {
+    width : 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.regform {
+    margin-top: 24px;
+    padding: 24px;
+    margin: auto;
+    background-color: rgb(169, 169, 169, .7);
+    width: 50%;
+}
+
+.main-content {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 30px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 16px;
+    color: #a9a9a9;
+}
+
+.footer_bottom {
+	list-style-type: none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.footer_bottom li { display: inline; }
+.footer_bottom li a { 
+    color: #a9a9a9; 
+    margin:0 12px; 
+}
+
+.footer_bottom li a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.social_footer { 
+    display:table; 
+    margin:15px auto 0 auto; 
+    list-style-type:none; 
+}
+
+.social_footer li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer li a { color: black; border:1px solid black; padding:8px;border-radius:50%; }
+.social_footer li i {  width:20px; height:20px; text-align:center; }
+
+a {
+    color: #a9a9a9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.cr {
+    margin: auto;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.button-center {
+    margin: auto;
+}
+
+.jumbotron {
+    background-image: url('../images/neon_bubbles.jpg');
+    background-color: rgb(169, 169, 169, .5);
+}
+
+.container-opacity {
+    background-color: rgb(169, 169, 169, .6);
+    padding: 24px;
+    color: white;
+}
+
+.video {
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image-mine {
+    width: 70%;
+    padding: 18px;
+    margin: auto;
+    height: 70%;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.presentation, .exercise {
+    margin-bottom: 18px;
+}
+
+.go {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    color: #b900bc
+}
+
+.go a {
+    color: #b900bc;
+}
+
+.go a:hover {
+    color: #b86bba;
+    text-decoration: none;
+}
+
+img {
+    padding-bottom: 8px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    margin: auto;
+}
+
+.dashboard-table {
+    width: 70%;
+    margin: auto;
+    margin-top: 36px;
+    color: black;
+}
+
+.sample-form {
+    width: 70%;
+    margin-top: 36px;
+}
+
+.dashboard-table a {
+    color: black;
+}
+
+.dashboard-table a:hover {
+    color: black;
+    text-decoration: underline;
+}

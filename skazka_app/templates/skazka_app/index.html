@@ -1,0 +1,75 @@
+{% extends 'skazka_app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class='main-content'>
+
+    <div class='intro'>
+        <h1>Здравствуйте!<h1>
+        <h2>Skazka is a free, interactive, media-based Russian textbook. </h2>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-opacity">
+            <h1 class="display-7">Get started</h1>
+            <p class="lead">What does Russian sound like? Watch this clip from Soyuzmultfilm's "The Snow Queen," then match the vocabulary words below. Learn the Cyrillic alphabet in Chapter 1. Register to track your progress&nbsp;  <i class="fas fa-chart-line"></i></p>
+        </div>
+
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uK-YTOlM59w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="vocab-box">
+        <div class="info">
+            <h2>Vocabulary</h2>
+            <h5 class="instructions">Drag the English word to its Russian equivalent</h5>
+            <p>Score: <text id="score001">0</text></p>
+        </div>
+
+        <div class="board">
+            <div class="box002" ondrop="drop001(event)">
+                <text ondragstart="dragStart001(event)" draggable="true" id="target001">hello</text>
+            </div>
+            
+            <div class="box002" ondrop="drop002(event)">
+                <text ondragstart="dragStart002(event)" draggable="true" id="target002">umbrella</text>
+            </div>
+
+            <div class="box002" ondrop="drop003(event)">
+                <text ondragstart="dragStart003(event)" draggable="true" id="target003">first</text>
+            </div>
+
+            <div class="box002" ondrop="drop004(event)">
+                <text ondragstart="dragStart004(event)" draggable="true" id="target004">wait</text>
+            </div>
+
+            <div class="box002" ondrop="drop005(event)">
+                <text ondragstart="dragStart005(event)" draggable="true" id="target005">Anderson</text>
+            </div> <div class="break"></div> 
+
+            <div class="box001" ondrop="drop006(event)" ondragover="allowDrop001(event)" id="place001">здравствуйте &nbsp;<i class="far fa-hand-paper"></i></div> 
+
+            <div class="box001" ondrop="drop009(event)" ondragover="allowDrop004(event)" id="place004">погодите &nbsp; <i class="fas fa-stopwatch"></i></div> 
+
+            <div class="box001" ondrop="drop007(event)" ondragover="allowDrop002(event)" id="place002">зонтик &nbsp;<i class="fas fa-umbrella"></i></div> 
+
+            <div class="box001" ondrop="drop010(event)" ondragover="allowDrop005(event)" id="place005">Андерсон &nbsp; <i class="fas fa-user-tie"></i></div> 
+
+            <div class="box001" ondrop="drop008(event)" ondragover="allowDrop003(event)" id="place003">первый &nbsp; 𝟣<sup>st</sup></div> 
+        </div>
+
+        <div id="result">
+            <h4></h4>
+        </div>
+
+    </div>
+
+    <a href="ch_1"><h4 class="go">Go to Chapter 1 &nbsp;<i class="fas fa-arrow-right fa-lg"></i></a></h4>
+</div>
+
+<script src="static/scripts/home.js"></script>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+.page-title {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    font-size: 2.5em;
+    font-family: 'Bungee Outline', cursive;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 1000px;
+    box-sizing: border-box;
+}
+
+.tile {
+    position: relative;
+    /* background-color: #b900bc; */
+    height: 150px;
+    width: 125px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.back-face:hover {
+    filter: brightness(1.75);
+}
+
+.tile active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.tile.flip {
+    transform: rotateY(180deg);
+}
+
+.correct {
+    border: 4px solid #b900bc;
+}
+#results {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#start {
+    text-align: center;
+    margin: auto;
+}

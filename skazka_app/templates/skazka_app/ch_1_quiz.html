@@ -1,0 +1,28 @@
+{% extends 'skazka_app/base.html' %}
+
+{% block content %}
+
+<div class='main-content'>
+
+    <h1>Chapter 1 Quiz</h1> 
+    {% comment %} <h3>{{ one_user.id }}</h3> {% endcomment %}
+
+    <div class="sample-form">
+        <form action="/create_score" method="post">
+        {% csrf_token %}
+    
+            <div class="form-group">
+                <label for="chapter">Chapter</label>
+                <input type="text" class="form-control" name="chapter" id="chapter"/>
+            </div>
+
+            <div class="form-group">
+                <label for="score">Score</label>
+                <input type="text" class="form-control" name="grade" id="score"/>
+            </div>
+
+            <button type="submit" class="gameButton">Submit</button>
+        </form>
+</div>
+
+{% endblock %}

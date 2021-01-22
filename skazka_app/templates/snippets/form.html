@@ -1,0 +1,21 @@
+
+{% load static %} 
+
+{% block content %}
+
+<div class="regform">
+
+    <form method='POST' action="." enctype="multipart/form-data" class="form-group">
+        {% csrf_token %}
+
+        {{ form.as_p  }}
+        
+        <div class="col text-right">
+            <button type='submit' class='btn btn-secondary'>Submit</button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

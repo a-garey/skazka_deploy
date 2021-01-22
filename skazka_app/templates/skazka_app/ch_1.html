@@ -1,0 +1,230 @@
+{% extends 'skazka_app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class='main-content'>
+
+    <div class='intro'>
+        <h1><SPAN STYLE="font-family: 'Gochi Hand', cursive; font-size: 36pt">Chapter 1: The cyrillic alphabet</span><h1>
+        <h4>Chances are, you already know 70% of the Russian alphabet!</h4>
+    </div>
+
+    <!--Image content-->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-4 row-cols-md-3 g-3">
+                <div class="col-sm-4">
+                    <div class="card shadow-sm">
+                        <div class="card-image-mine">
+                            <img src="/static/images/delta-gamma-phi.jpg" width="60" height="200" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Delta Gamma Phi, Sorority</h5>
+                            <p class="card-text"> Д = D ⬩ Г = G ⬩ Ф = F</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-sm">
+                        <div class="card-image-mine">
+                            <img src="/static/images/tri-delt.jpg" width="60" height="200" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Delta Delta Delta, Sorority</h5>
+                            <p class="card-text">Д = D</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-sm">
+                        <div class="card-image-mine">
+                            <img src="/static/images/pi.png" width="60" height="200" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pi</h5>
+                            <p class="card-text">П = P</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Video content-->
+    <div class="presentation">
+        <div class="container-opacity">
+            <h2 class="display-7">Listen and learn</h2>
+            <p class="lead">Watch the Cyrillic alphabet video and complete the exercises below.</p>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ApzqVSob77M?start=9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--Excercise 1.1-->
+    <div class="vocab-box">
+        <div class="info">
+            <h5>Excercise 1.1</h5>
+            <p class="instructions">Watch the video and put the words in the correct order</p>
+            <p>Score: <text id="score001">0</text></p>
+        </div>
+
+        <div class="board">
+
+            <div class="box003" ondrop="drop003(event)">
+                <text ondragstart="dragStart003(event)" draggable="true" id="target003">крокодил</text>
+            </div>
+
+            <div class="box003" ondrop="drop001(event)">
+                <text ondragstart="dragStart001(event)" draggable="true" id="target001">ворона</text>
+            </div>
+
+            <div class="box003" ondrop="drop004(event)">
+                <text ondragstart="dragStart004(event)" draggable="true" id="target004">пенгвин</text>
+            </div>
+            
+            <div class="box003" ondrop="drop002(event)">
+                <text ondragstart="dragStart002(event)" draggable="true" id="target002">динозавр</text>
+            </div>
+
+            <div class="box003" ondrop="drop005(event)">
+                <text ondragstart="dragStart005(event)" draggable="true" id="target005">фламинго</text>
+            </div> <div class="break"></div> 
+
+            <div class="box004" ondrop="drop006(event)" ondragover="allowDrop001(event)" id="place001">1</i></div> 
+
+            <div class="box004" ondrop="drop007(event)" ondragover="allowDrop002(event)" id="place002">2</i></div> 
+
+            <div class="box004" ondrop="drop008(event)" ondragover="allowDrop003(event)" id="place003">3</div> 
+
+            <div class="box004" ondrop="drop009(event)" ondragover="allowDrop004(event)" id="place004">4</i></div> 
+
+            <div class="box004" ondrop="drop010(event)" ondragover="allowDrop005(event)" id="place005">5</div>      
+        </div>
+
+        <div id="result">
+            <h4></h4>
+        </div>
+    </div>
+
+    <!--Excercise 1.2-->
+    <div class="vocab-box">
+        <div class="info">
+            <h5>Excercise 1.2</h5>
+            <p class="instructions">Secret messages: type the English equivalent of the Cyrillic letter to decode the word</p>
+        </div>
+
+        <div class="decodeArea">
+
+        </div>
+    
+    </div>
+
+    <!--Excercise 1.3-->
+    <div class="vocab-box">
+        <div class="info">
+            <h5>Excercise 1.3</h5>
+            <p class="instructions">Unscramble the letters to spell the Russian animal name</p>
+        </div>
+
+        <div class="gameArea"></div>
+    </div>
+
+    <!--Excercise 1.4-->
+    <div class="vocab-box">
+        <div class="exercise">
+            <h5>Excercise 1.4</h5>
+            <p class="instructions">Flip over the cards to match the words and pictures</p>
+
+            <div id="start">
+                <div id="results"> </div>
+                <button id="matchBtn" class="gameButton">Play Again</button>
+            </div>
+
+            <div id="board" class="memory-game" >
+                {% comment %} <div class="game-info-container">
+                    <div class="game-info">
+                        Time <span id="time-remaining">100</span>
+                    </div>
+                    <div class="game-info">
+                        Flips <span id="flips">0</span>s
+                    </div>
+                </div> {% endcomment %}
+
+                <div class="tile" data-framework="chocolate">
+                    <img class="front-face" src="/static/images/chocolate.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="chocolate">
+                    <img class="front-face" src="/static/images/chocolate-word.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="fruit">
+                    <img class="front-face" src="/static/images/fruit.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="fruit">
+                    <img class="front-face" src="/static/images/fruit-word.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="guitar">
+                    <img class="front-face" src="/static/images/guitar.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="guitar">
+                    <img class="front-face" src="/static/images/guitar-word.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="pizza">
+                    <img class="front-face" src="/static/images/pizza.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="pizza">
+                    <img class="front-face" src="/static/images/pizza-word.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="tennis">
+                    <img class="front-face" src="/static/images/tennis.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="tennis">
+                    <img class="front-face" src="/static/images/tennis-word.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="tiger">
+                    <img class="front-face" src="/static/images/tiger.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+                <div class="tile" data-framework="tiger">
+                    <img class="front-face" src="/static/images/tiger-word.png" />
+                    <img class="back-face" src="/static/images/squiggles.jpg" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="/ch_1_quiz"><h4 class="go">Go to Chapter 1 Quiz &nbsp;<i class="fas fa-arrow-right fa-lg"></i></a></h4>
+</div>
+
+<script src="/static/scripts/game-1.js"></script>
+<script src="/static/scripts/scramble.js"></script>
+<script src="/static/scripts/decode.js"></script>
+<script src="/static/scripts/match.js"></script>
+
+
+{% endblock %}
